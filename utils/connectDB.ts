@@ -8,8 +8,10 @@ const connnectDB = () => {
   }
 
   mongoose
-  // @ts-ignore
-    .connect(process.env.MONGODB_URL)
+    // @ts-ignore
+    .connect(
+      "mongodb+srv://admin:m1a2h3d4i5@cluster0.rkyeg.mongodb.net/nextjs-pinterest?retryWrites=true&w=majority"
+    )
     .then(() => {
       console.log("connected DB");
     })

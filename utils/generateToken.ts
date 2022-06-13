@@ -4,8 +4,7 @@ export const createAccessToken = (payload: any) => {
   // @ts-ignore
   return jwt.sign(
     payload,
-    // @ts-ignore
-    process.env.Access_token,
+    "TGYBUKEJRKSLHCBYTDCEVAUYBIKH7YXFDI7DBYU34I",
     { expiresIn: "15m" }
   );
 };
@@ -14,8 +13,7 @@ export const createRefreshToken = (payload: any) => {
   // @ts-ignore
   return jwt.sign(
     payload,
-    // @ts-ignore
-    process.env.REFRESH_TOKEN_SECRET,
+    "IGUYBUCAPUEF78REUICBJHUIYCFG6R7FFSHJADGYCSGEYGD347TFGBXHSSSCSFGOIUWH48GHBG4G37RU",
     { expiresIn: "7d" }
   );
 };
