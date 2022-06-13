@@ -31,7 +31,7 @@ const Header = () => {
                 />
               </a>
             </Link>
-            <p className="hidden mg:block">{user.email}</p>
+            <p className="hidden md:block">{user.email}</p>
             <button
               onClick={() => SignOut()}
               className="text-gray-900 font-medium px-3 py-1 rounded-lg hover:bg-[#0096f5] hover:text-white transition-all "
