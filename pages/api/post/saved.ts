@@ -24,7 +24,6 @@ const getSavedPost = async (
 ) => {
   try {
     const rf_token = req.cookies.refreshtoken;
- 
 
     if (!rf_token)
       return res
@@ -34,7 +33,7 @@ const getSavedPost = async (
     const result: any = jwt.verify(
       rf_token,
       // @ts-ignore
-      process.env.REFRESH_TOKEN_SECRET
+      "IGUYBUCAPUEF78REUICBJHUIYCFG6R7FFSHJADGYCSGEYGD347TFGBXHSSSCSFGOIUWH48GHBG4G37RU"
     );
 
     if (!result)
@@ -42,7 +41,9 @@ const getSavedPost = async (
         err: "Your token is incorrect or has expired.",
       });
 
-    const saved = await User.findById(result.id).select("saved")
+    const saved = await User.findById(result.id).select(
+      "saved"
+    );
 
     const newData: any = [];
     const classCard = [
@@ -52,11 +53,15 @@ const getSavedPost = async (
       "x-large",
     ];
     saved.saved.forEach((post: any) => {
-      newData.push({ ...post, size: classCard[Math.floor(Math.random() * classCard.length)]});
- 
+      newData.push({
+        ...post,
+        size: classCard[
+          Math.floor(Math.random() * classCard.length)
+        ],
+      });
     });
-    
-    res.json({ msg: "success", saved:newData });
+
+    res.json({ msg: "success", saved: newData });
   } catch (error: any) {
     res.status(500).json({ err: error.message });
   }

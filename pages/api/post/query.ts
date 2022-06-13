@@ -45,7 +45,7 @@ const update = async (
     const result: any = jwt.verify(
       rf_token,
       // @ts-ignore
-      process.env.REFRESH_TOKEN_SECRET
+      "IGUYBUCAPUEF78REUICBJHUIYCFG6R7FFSHJADGYCSGEYGD347TFGBXHSSSCSFGOIUWH48GHBG4G37RU"
     );
 
     if (!result)

@@ -4,10 +4,15 @@ import { AiOutlineCopy } from "react-icons/ai";
 interface props {
   ShowMoreInfo: boolean;
   url: string;
-  id:string;
-  className:string;
+  id: string;
+  className: string;
 }
-const ShowMoreInfo = ({ ShowMoreInfo, url , id, className}: props) => {
+const ShowMoreInfo = ({
+  ShowMoreInfo,
+  url,
+  id,
+  className,
+}: props) => {
   return (
     <div
       className={`bg-white h-fit absolute z-50 rounded-lg  border border-[#eee]  !w-64 overflow-hidden ${className} ${
@@ -29,7 +34,7 @@ const ShowMoreInfo = ({ ShowMoreInfo, url , id, className}: props) => {
         </li>
         <li>
           <a
-            href={`https://web.whatsapp.com/send?text=${process.env.BASE_Url}/post/${url}`}
+            href={`https://web.whatsapp.com/send?text=https://nextjs-pinterest.vercel.app/post/${url}`}
             data-action="share/whatsapp/share"
             className="font-medium w-full  hover:bg-gray-100 text-gray-800 py-2 cursor-pointer px-3 transition-all flex justify-end"
             title="shere post link"
@@ -43,7 +48,7 @@ const ShowMoreInfo = ({ ShowMoreInfo, url , id, className}: props) => {
         <li
           onClick={() => {
             navigator.clipboard.writeText(
-              `${process.env.BASE_Url}/posts/${id}`
+              `https://nextjs-pinterest.vercel.app/posts/${id}`
             );
           }}
         >

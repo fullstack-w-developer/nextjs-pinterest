@@ -19,7 +19,7 @@ export default async (req: any, res: any) => {
     const result: any = jwt.verify(
       rf_token,
       // @ts-ignore
-      process.env.REFRESH_TOKEN_SECRET
+     "IGUYBUCAPUEF78REUICBJHUIYCFG6R7FFSHJADGYCSGEYGD347TFGBXHSSSCSFGOIUWH48GHBG4G37RU"
     );
     if (!result)
       return res.status(400).json({
