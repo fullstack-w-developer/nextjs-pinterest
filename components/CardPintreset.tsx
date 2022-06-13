@@ -45,7 +45,7 @@ const CardPintreset = ({
             className={` block w-full h-full absolute left-0 top-0 cursor-zoom-in`}
           >
             <Link
-              href={`${process.env.BASE_Url}/posts/${post._id}`}
+              href={`/posts/${post._id}`}
               passHref
             >
               <a className="w-full h-full block"></a>
