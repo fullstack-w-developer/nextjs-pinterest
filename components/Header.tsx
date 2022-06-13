@@ -60,7 +60,7 @@ const Header = () => {
               </a>
             </Link>
           </div>
-          <div>
+          <div className="hidden md:block">
             <Link href="/">
               <a
                 className={`  text-sm px-7 py-[7px] rounded-md ${
